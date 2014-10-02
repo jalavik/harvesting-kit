@@ -126,7 +126,8 @@ class PosPackage(object):
             record_add_field(rec, '245', subfields=[('a', title)])
         record_copyright = self._get_copyright()
         if record_copyright:
-            record_add_field(rec, '540', subfields=[('a', record_copyright)])
+            record_add_field(rec, '540', subfields=[('a', record_copyright),
+                                                    ('b', 'SISSA')])
         subject = self._get_subject()
         if subject:
             record_add_field(rec, '650', ind1='1', ind2='7', subfields=[('a', subject),
